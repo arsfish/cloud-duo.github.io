@@ -6,16 +6,20 @@ body {
   background-color: #ffffff;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 header {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
-  font-size: calc(12pt + 1vw);
+  font-size: calc(10pt + 0.8vw);
   color: #000000;
   width: 100%;
-  align-items: center;
-  
+  background-color: #d5d3d4;
 }
 .header-logo a,
 .header-faq a {
@@ -23,62 +27,61 @@ header {
   color: #000000;
 }
 .header-logo {
-  margin-left: 8vw;
+  position: absolute;
+  top: 1vh;
+  left: 5vw;
 }
 .header-logo-bt:hover {
   color: #121266;
+  cursor: pointer;
 }
 .header-faq {
   position: absolute;
-  right: calc(60px + 10vw);
+  top: 1vh;
+  right: calc(70px + 10vw);
 }
 .header-faq-bt:hover {
   color: #121266;
 }
 .header-lang {
   position: absolute;
-  right: calc(20px + 8vw);
+  top: 1vh;
+  right: calc(35px + 5vw);
 }
-.header-nav {
-  display: block;
-  height: 40px;
-  width: 100%;
-  background-color: #cccccc;
-  background-color: lightgrey;
-  padding: 0;
-  margin: 0;
-}
+
 header .header-toggle {
+  position: relative;
+  height: 40px;
+  right: 0;
   width: 100%;
   padding: 0;
   margin: 0;
+  z-index: 1;
 }
 #nav {
+  cursor: pointer;
   overflow: hidden;
   background: #505050;
   height: 0;
-  max-height: 0px;
   list-style-type: none;
   padding-left: 0;
-  -webkit-transition: linear 1s;
-  transition: linear 1s;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
 }
 #nav.open {
-  
-  height: auto;
-  max-height: 500px;
-  -webkit-transition: linear 1s;
-  transition: linear 1s;
+  height: 100%;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
+  margin-top: calc(20px + 4vh);
 }
 
 #nav li {
-  float: none;
-  text-align: left;
+  text-align: right;
   text-decoration: none;
   width: 100%;
   margin: 0;
-  -webkit-transition: linear 1s;
-  transition: linear 1s;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
 }
 #nav li a {
   text-decoration: none;
@@ -87,25 +90,24 @@ header .header-toggle {
   border-bottom: 1px solid white;
   display: block;
   margin: 0;
-  -webkit-transition: linear 1s;
-  transition: linear 1s;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
 }
 
 #contain {
-  display: inline-block;
   cursor: pointer;
   position: absolute;
-  right: 10px;
   top: 0px;
+  right: 0;
 }
 .bar1,
 .bar2,
 .bar3 {
-  width: 35px;
+  width: calc(25px + 0.8vw);
   height: 5px;
   background-color: #333;
   margin: 6px 0;
-  transition: 0.2s;
+  margin-right: 2vw;
 }
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
@@ -120,6 +122,7 @@ header .header-toggle {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
+
 .main-home {
   position: relative;
   display: flex;
@@ -149,14 +152,13 @@ header .header-toggle {
 }
 .main-intro-text {
   width: calc(10px + 5vw);
-  font-size: calc(8pt + 1vw);
+  font-size: calc(8pt + 0.8vw);
 }
 .main-intro p {
   text-align: justify;
 }
 
-
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 540px) {
   img {
     display: block;
     max-width: 100%;
@@ -167,15 +169,12 @@ header .header-toggle {
     margin: 0;
     box-sizing: border-box;
   }
-  .main-intro {
-    border: 1px solid black;
-  }
+
   .main-intro-background {
     display: block;
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    border: 1px solid black;
     margin-bottom: 5vh;
   }
   .main-intro-background p {

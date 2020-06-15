@@ -1,4 +1,5 @@
-var x = document.getElementById("contain");
+window.onload=function()  {
+  var x = document.getElementById("contain");
 
 x.addEventListener("click", myFunction);
 
@@ -7,4 +8,5 @@ function myFunction() {
   element.classList.toggle("open");
   
   x.classList.toggle("change");
+}
 }
