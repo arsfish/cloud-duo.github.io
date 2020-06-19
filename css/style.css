@@ -161,6 +161,16 @@ header .header-toggle {
   text-align: justify;
 }
 
+footer {
+  height: 10vh;
+  width: 100%;
+  background-color: #f3f3f3f6;
+}
+.footer-contact p {
+  padding-left: 2vw;
+  padding-top: 3vh;
+}
+
 @media screen and (max-width: 540px) {
   img {
     display: block;
