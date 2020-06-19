@@ -8,18 +8,20 @@ body {
   padding: 0;
   height: 100%;
 }
-
 header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   font-size: calc(10pt + 0.8vw);
   color: #000000;
   width: 100%;
-  background-color: #d5d3d4;
+  background-color: #f3f3f3f6;
+  z-index: 1;
 }
 .header-logo a,
 .header-faq a {
@@ -149,6 +151,7 @@ header .header-toggle {
 .main-intro-background img {
   height: 80vh;
   margin-left: 5vw;
+  z-index: -1;
 }
 .main-intro-text {
   width: calc(10px + 5vw);
