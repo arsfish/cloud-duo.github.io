@@ -1,12 +1,18 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scrollbar-width: none;
+}
 body {
   font-family: "Times New Roman", Times, serif;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
-  height: 100%;
+  color: #d0cfd8;
+}
+::-webkit-scrollbar {
+  width: 0px;
 }
 header {
   position: sticky;
@@ -50,7 +56,6 @@ header {
   top: 1vh;
   right: calc(35px + 5vw);
 }
-
 header .header-toggle {
   position: relative;
   height: 40px;
@@ -67,13 +72,12 @@ header .header-toggle {
   height: 0;
   list-style-type: none;
   padding-left: 0;
-  -webkit-transition: linear 0.2s;
-  transition: linear 0.2s;
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease;
 }
 #nav.open {
   height: 100%;
-  -webkit-transition: linear 0.2s;
-  transition: linear 0.2s;
   margin-top: calc(20px + 4vh);
 }
 
@@ -82,8 +86,6 @@ header .header-toggle {
   text-decoration: none;
   width: 100%;
   margin: 0;
-  -webkit-transition: linear 0.2s;
-  transition: linear 0.2s;
 }
 #nav li a {
   text-decoration: none;
@@ -92,10 +94,10 @@ header .header-toggle {
   border-bottom: 1px solid white;
   display: block;
   margin: 0;
-  -webkit-transition: linear 0.2s;
-  transition: linear 0.2s;
 }
-
+#nav li a:hover {
+  color: #bbbce0;
+}
 #contain {
   cursor: pointer;
   position: absolute;
@@ -110,6 +112,10 @@ header .header-toggle {
   background-color: #333;
   margin: 6px 0;
   margin-right: 2vw;
+  transition-delay: 0;
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease-in;
 }
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
@@ -124,49 +130,75 @@ header .header-toggle {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
-
 .main-home {
   position: relative;
+  display: block;
+}
+
+.main-intro-bg {
+  position: fixed;
+  top: 0;
+  opacity: 0.8;
+  z-index: -1;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+}
+.main-intro-text {
+  height: 70vh;
+  margin: 30vh 20vw 0 20vw;
+  color: #f3f3f3f6;
+  text-align: justify;
+}
+.main-intro-text p {
+  background-color: #505050;
+  opacity: 0.95;
+  padding: 2vh 2vw;
+}
+.main-biography {
+  position: relative;
+  background-color: #505050f6;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
   margin: 0 auto;
-  margin-top: 5vh;
+  z-index: 0;
 }
 
-.main-intro-background {
+.main-biography-background {
   margin: 0 auto;
+  margin-top: 20vh;
   margin-bottom: 10vh;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
 }
-.main-intro-background p {
+.main-biography-background p {
   margin-left: 5vw;
   width: 17vw;
 }
-.main-intro-background img {
+.main-biography-background img {
   height: 80vh;
   margin-left: 5vw;
   z-index: -1;
 }
-.main-intro-text {
+.main-biography-text {
   width: calc(10px + 5vw);
   font-size: calc(8pt + 0.8vw);
 }
-.main-intro p {
+.main-biography p {
   text-align: justify;
 }
-
 footer {
-  height: 10vh;
-  width: 100%;
-  background-color: #f3f3f3f6;
+  background-color: #333;
+  border: 1px solid #333;
 }
-.footer-contact p {
+.footer-contact > p {
   padding-left: 2vw;
   padding-top: 3vh;
 }
@@ -182,22 +214,31 @@ footer {
     margin: 0;
     box-sizing: border-box;
   }
-
-  .main-intro-background {
+  .main-intro-bg {
+    background-image: url(../img/background-main-2.jpg);
+    opacity: 1;
+  }
+  .main-intro-text {
+    margin-top: 70vh;
+  }
+  .main-intro-text p {
+    color: #333333;
+  }
+  .main-biography-background {
     display: block;
     margin: 0 auto;
     width: 100%;
     height: 100%;
     margin-bottom: 5vh;
   }
-  .main-intro-background p {
+  .main-biography-background p {
     width: 80vw;
     text-align: justify;
     margin: 0 auto;
     margin-bottom: 1vh;
     margin-top: 1vh;
   }
-  .main-intro-background img {
+  .main-biography-background img {
     height: 70vh;
     margin: 0 auto;
   }
