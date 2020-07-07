@@ -28,6 +28,7 @@ header {
   width: 100%;
   background-color: #f3f3f3f6;
   z-index: 1;
+  padding-bottom: 1vh;
 }
 .header-logo a,
 .header-faq a {
@@ -40,7 +41,7 @@ header {
   left: 5vw;
 }
 .header-logo-bt:hover {
-  color: #121266;
+  color: #b12f2fd0;
   cursor: pointer;
 }
 .header-faq {
@@ -49,7 +50,7 @@ header {
   right: calc(70px + 10vw);
 }
 .header-faq-bt:hover {
-  color: #121266;
+  color: #b12f2fd0;
 }
 .header-lang {
   position: absolute;
@@ -68,7 +69,7 @@ header .header-toggle {
 #nav {
   cursor: pointer;
   overflow: hidden;
-  background: #505050;
+  background: #423c3c;
   height: 0;
   list-style-type: none;
   padding-left: 0;
@@ -96,7 +97,7 @@ header .header-toggle {
   margin: 0;
 }
 #nav li a:hover {
-  color: #bbbce0;
+  color: #b12f2fd0;
 }
 #contain {
   cursor: pointer;
@@ -161,7 +162,7 @@ header .header-toggle {
 
 .main-intro-text {
   height: 70vh;
-  margin: calc(10vh + 100px) 20vw 0 20vw;
+  margin: calc(15vh + 100px) 20vw 0 20vw;
   color: #fffbfb;
   text-align: justify;
 }
@@ -188,7 +189,6 @@ header .header-toggle {
   flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: space-between;
-  border: 1px solid black;
 }
 .main-biography-background p {
   padding: 0 3vw 2vw 3vw;
@@ -207,15 +207,20 @@ header .header-toggle {
   text-align: justify;
 }
 footer {
-  background-color: #333;
-  border: 1px solid #333;
+  background-color: #f3f3f3f6;
+  border: 1px solid #f3f3f3f6;
 }
-.footer-contact > p {
+.footer-contact p {
   padding-left: 2vw;
-  padding-top: 3vh;
+  padding-top: 1vh;
+  color: #333;
 }
 
 @media screen and (max-width: 540px) {
+  body {
+    background-color: #10051b;
+    z-index: -4;
+  }
   img {
     display: block;
     max-width: 100%;
@@ -226,15 +231,24 @@ footer {
     margin: 0;
     box-sizing: border-box;
   }
+
   .main-intro-bg {
-    background-image: url(../img/background-main-2.jpg);
-    opacity: 1;
+    background-image: url(../img/background-mobile.jpg);
+    background-size: cover;
+  }
+  .main-intro-bg-back {
+    background-image: url(../img/background-mobile.jpg);
+    background-size: cover;
   }
   .main-intro-text {
-    margin-top: 70vh;
+    margin-top: 40vh;
+    margin-bottom: 40vh;
   }
   .main-intro-text p {
-    color: #333333;
+    color: #f3f3f3f6;
+    background-color: #10051b;
+    opacity: 0.9;
+    width: 70vw;
   }
   .main-biography-background {
     display: block;
@@ -248,10 +262,10 @@ footer {
     text-align: justify;
     margin: 0 auto;
     margin-bottom: 1vh;
-    margin-top: 1vh;
+    margin-top: 2vh;
   }
   .main-biography-background img {
-    height: 70vh;
+    width: 80vw;
     margin: 0 auto;
   }
 }
