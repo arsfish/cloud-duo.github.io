@@ -6,7 +6,7 @@ html {
 }
 body {
   font-family: "Times New Roman", Times, serif;
-  background-color: #ffffff;
+  background-color: #180101c9;
   margin: 0;
   padding: 0;
   color: #d0cfd8;
@@ -138,53 +138,65 @@ header .header-toggle {
 .main-intro-bg {
   position: fixed;
   top: 0;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: -1;
   background-image: url(../img/background.jpg);
+  background-color: #240101f6;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
   height: 100%;
 }
+.main-intro-bg-back {
+  position: fixed;
+  top: 0;
+  opacity: 0.08;
+  z-index: -5;
+  background-image: url(../img/background.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
 .main-intro-text {
   height: 70vh;
-  margin: 30vh 20vw 0 20vw;
-  color: #f3f3f3f6;
+  margin: calc(10vh + 100px) 20vw 0 20vw;
+  color: #fffbfb;
   text-align: justify;
 }
 .main-intro-text p {
-  background-color: #505050;
-  opacity: 0.95;
+  background-color: #2b1515ee;
+  font-size: calc(8pt + 0.8vw);
   padding: 2vh 2vw;
 }
 .main-biography {
   position: relative;
-  background-color: #505050f6;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  margin: 0 auto;
   z-index: 0;
 }
 
 .main-biography-background {
   margin: 0 auto;
-  margin-top: 20vh;
+  margin-top: 10vh;
   margin-bottom: 10vh;
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  border: 1px solid black;
 }
 .main-biography-background p {
-  margin-left: 5vw;
-  width: 17vw;
+  padding: 0 3vw 2vw 3vw;
+  width: 35vw;
 }
 .main-biography-background img {
-  height: 80vh;
-  margin-left: 5vw;
+  width: 50vw;
+  height: auto;
   z-index: -1;
 }
 .main-biography-text {
