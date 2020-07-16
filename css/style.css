@@ -141,7 +141,7 @@ header .header-toggle {
   top: 0;
   opacity: 0.9;
   z-index: -1;
-  background-image: url(../img/background.jpg);
+  background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg);
   background-color: #240101f6;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -153,7 +153,7 @@ header .header-toggle {
   top: 0;
   opacity: 0.08;
   z-index: -5;
-  background-image: url(../img/background.jpg);
+  background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -233,11 +233,11 @@ footer {
   }
 
   .main-intro-bg {
-    background-image: url(../img/background-mobile.jpg);
+    background-image: url(https://images2.imgbox.com/0d/bb/kbLslW1R_o.jpg);
     background-size: cover;
   }
   .main-intro-bg-back {
-    background-image: url(../img/background-mobile.jpg);
+    background-image: url(https://images2.imgbox.com/0d/bb/kbLslW1R_o.jpg);
     background-size: cover;
   }
   .main-intro-text {

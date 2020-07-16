@@ -9,15 +9,15 @@ function headerNavToggler() {
 
 let biographyBg = document.getElementById("biography");
 this.addEventListener("scroll", function () {
-  biographyBg.style.opacity = +this.pageYOffset / 500 + "";
+  biographyBg.style.opacity = +this.pageYOffset / 600 + "";
   biographyBg.style.top = -this.pageYOffset + "px";
 });
 let introText = document.getElementById("intro-text");
 this.addEventListener("scroll", function () {
-  introText.style.opacity = 1 - +this.pageYOffset / 700 + "";
+  introText.style.opacity = 1 - +this.pageYOffset / 500 + "";
   introText.style.top = +this.pageYOffset + "px";
 });
 let introBg = document.getElementById("bg");
 this.addEventListener("scroll", function () {
-  introBg.style.opacity = 0.9 - this.pageYOffset / 700 + "";
+  introBg.style.opacity = 0.9 - this.pageYOffset / 500 + "";
 });
