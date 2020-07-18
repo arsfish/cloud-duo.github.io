@@ -24,8 +24,14 @@ this.addEventListener("scroll", function () {
 
 let bioBlock = document.getElementById("bio");
 let bioAyg = document.getElementById("bio-ayg");
-bioAyg.addEventListener("scroll", function () {
-  bioBlock.classList.toggle("active");
-  bioBlock.style.opacity = +bioBlock.pageYOffset / 100 + "";
-  bioBlock.style.top = -bioBlock.pageYOffset + "px";
+let distanceAyg = bioAyg.getBoundingClientRect().top;
+this.addEventListener("scroll", function () {
+  let topDistance = this.pageYOffset;
+  if (topDistance > distanceAyg) {
+    bioBlock.classList.add("active");
+    bioBlock.style.opacity = +bioBlock.pageYOffset / 600 + "";
+    bioBlock.style.top = -bioBlock.pageYOffset + "px";
+  } else {
+    bioBlock.classList.remove("active");
+  }
 });

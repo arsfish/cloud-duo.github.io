@@ -211,7 +211,8 @@ header .header-toggle {
 }
 #bio.active {
   background-color: black;
-  opacity: 0;
+  opacity: 1;
+  transition: 1s ease-in-out;
 }
 
 .main-future {
@@ -244,19 +245,20 @@ footer {
   padding-top: 1vh;
   color: #333;
 }
-@media screen and (max-width: 540px) {
-  .main-future-text {
-    display: block;
-    position: relative;
-    top: 0;
-    margin: 2vh auto;
+@media screen and (max-width: 800px) {
+  .main-intro-bg {
+    background-image: url(https://images2.imgbox.com/0d/bb/kbLslW1R_o.jpg);
+    background-size: cover;
   }
-  .main-future-text p {
-    margin: 0 auto;
-    width: 80vw;
+  .main-intro-bg-back {
+    background-image: url(https://images2.imgbox.com/0d/bb/kbLslW1R_o.jpg);
+    background-size: cover;
+  }
+  .main-future-text {
+    top: 20vh;
   }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 540px) {
   body {
     background-color: #10051b;
     z-index: -4;
@@ -309,6 +311,13 @@ footer {
     margin: 0 auto;
   }
   .main-future-text {
-    top: 20vh;
+    display: block;
+    position: relative;
+    top: 0;
+    margin: 2vh auto;
+  }
+  .main-future-text p {
+    margin: 0 auto;
+    width: 80vw;
   }
 }
