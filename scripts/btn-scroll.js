@@ -7,7 +7,7 @@ function headerNavToggler() {
   headerNav.classList.toggle("change");
 }
 
-let biographyBg = document.getElementById("biography");
+let biographyBg = document.getElementById("bio-both");
 this.addEventListener("scroll", function () {
   biographyBg.style.opacity = +this.pageYOffset / 600 + "";
   biographyBg.style.top = -this.pageYOffset + "px";
@@ -20,4 +20,12 @@ this.addEventListener("scroll", function () {
 let introBg = document.getElementById("bg");
 this.addEventListener("scroll", function () {
   introBg.style.opacity = 0.9 - this.pageYOffset / 500 + "";
+});
+
+let bioBlock = document.getElementById("bio");
+let bioAyg = document.getElementById("bio-ayg");
+bioAyg.addEventListener("scroll", function () {
+  bioBlock.classList.toggle("active");
+  bioBlock.style.opacity = +bioBlock.pageYOffset / 100 + "";
+  bioBlock.style.top = -bioBlock.pageYOffset + "px";
 });

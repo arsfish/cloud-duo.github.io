@@ -178,32 +178,61 @@ header .header-toggle {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  vertical-align: top;
   z-index: 0;
 }
 
 .main-biography-background {
   margin: 0 auto;
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: space-between;
 }
 .main-biography-background p {
-  padding: 0 3vw 2vw 3vw;
+  padding: 0 1.5vw 2vw 1.5vw;
   width: 35vw;
 }
 .main-biography-background img {
   width: 50vw;
   height: auto;
+  padding: 0 1.5vw 2vw 1.5vw;
   z-index: -1;
 }
 .main-biography-text {
   width: calc(10px + 5vw);
   font-size: calc(8pt + 0.8vw);
+  margin: 0;
 }
 .main-biography p {
+  text-align: justify;
+}
+#bio.active {
+  background-color: black;
+  opacity: 0;
+}
+
+.main-future {
+  position: relative;
+  display: block;
+}
+.main-future-desc {
+  position: relative;
+  display: block;
+}
+.main-future-desc img {
+  width: 100vw;
+}
+.main-future-text {
+  position: absolute;
+  top: calc(300px + 25vh);
+  margin: 0 30vw;
+  font-size: calc(8pt + 0.8vw);
+}
+.main-future-text p {
+  width: 40vw;
   text-align: justify;
 }
 footer {
@@ -215,8 +244,19 @@ footer {
   padding-top: 1vh;
   color: #333;
 }
-
 @media screen and (max-width: 540px) {
+  .main-future-text {
+    display: block;
+    position: relative;
+    top: 0;
+    margin: 2vh auto;
+  }
+  .main-future-text p {
+    margin: 0 auto;
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 770px) {
   body {
     background-color: #10051b;
     z-index: -4;
@@ -267,5 +307,8 @@ footer {
   .main-biography-background img {
     width: 80vw;
     margin: 0 auto;
+  }
+  .main-future-text {
+    top: 20vh;
   }
 }
