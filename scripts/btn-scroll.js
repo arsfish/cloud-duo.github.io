@@ -27,7 +27,7 @@ let bioAyg = document.getElementById("bio-ayg");
 let futureSection = document.getElementById("future");
 let distanceAyg = bioAyg.getBoundingClientRect().bottom;
 this.addEventListener("scroll", function () {
-  let topDistance = this.pageYOffset + "";
+  let topDistance = this.pageYOffset - "";
   if (topDistance > distanceAyg) {
     bioBlock.classList.add("active");
     bioAyg.classList.add("active");

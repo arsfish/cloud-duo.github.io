@@ -221,6 +221,9 @@ header .header-toggle {
   transition: 1s;
   opacity: 0;
 }
+#bio-ayg {
+  transition: 1s ease-out;
+}
 .main-future {
   position: relative;
   display: block;
