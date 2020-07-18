@@ -25,15 +25,13 @@ this.addEventListener("scroll", function () {
 let bioBlock = document.getElementById("bio");
 let bioAyg = document.getElementById("bio-ayg");
 let futureSection = document.getElementById("future");
-let distanceAyg = bioAyg.getBoundingClientRect().bottom;
+let distanceAyg = futureSection.getBoundingClientRect().top;
 this.addEventListener("scroll", function () {
-  let topDistance = this.pageYOffset - "";
+  let topDistance = this.pageYOffset;
   if (topDistance > distanceAyg) {
     bioBlock.classList.add("active");
     bioAyg.classList.add("active");
     future.classList.add("active");
-    //future.style.opacity = +this.pageYOffset / 600 + "";
-    //future.style.top = -this.pageYOffset + "px";
   } else {
     bioBlock.classList.remove("active");
     bioAyg.classList.remove("active");
