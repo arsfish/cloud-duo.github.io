@@ -209,12 +209,18 @@ header .header-toggle {
 .main-biography p {
   text-align: justify;
 }
+#bio {
+  transition: 1s ease-out;
+}
 #bio.active {
   background-color: black;
   opacity: 1;
   transition: 1s ease-in-out;
 }
-
+#bio-ayg.active {
+  transition: 1s;
+  opacity: 0;
+}
 .main-future {
   position: relative;
   display: block;
@@ -235,6 +241,14 @@ header .header-toggle {
 .main-future-text p {
   width: 40vw;
   text-align: justify;
+}
+#future {
+  opacity: 0;
+  transition: 1s ease-out;
+}
+#future.active {
+  opacity: 1;
+  transition: 1s ease-in-out;
 }
 footer {
   background-color: #f3f3f3f6;
@@ -309,6 +323,10 @@ footer {
   .main-biography-background img {
     width: 80vw;
     margin: 0 auto;
+  }
+  .main-future {
+    background-color: black;
+    border-bottom: 1px solid black;
   }
   .main-future-text {
     display: block;
