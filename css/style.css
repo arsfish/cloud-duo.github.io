@@ -191,9 +191,10 @@ header .header-toggle {
   align-items: flex-start;
   justify-content: space-between;
 }
-.main-biography-background p {
+.main-biography-background div {
   padding: 0 1.5vw 2vw 1.5vw;
   width: 35vw;
+  text-align: justify;
 }
 .main-biography-background img {
   width: 50vw;
@@ -208,6 +209,20 @@ header .header-toggle {
 }
 .main-biography p {
   text-align: justify;
+}
+.main-biography-btn p {
+  background-color: #2b1515ee;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.main-biography-btn {
+  opacity: 0.8;
+  text-decoration: none;
+}
+.main-biography-btn:hover {
+  opacity: 1;
 }
 #bio {
   transition: 1s ease-out;
@@ -316,12 +331,18 @@ footer {
     height: 100%;
     margin-bottom: 5vh;
   }
-  .main-biography-background p {
+  .main-biography-background div {
     width: 80vw;
     text-align: justify;
     margin: 0 auto;
     margin-bottom: 1vh;
     margin-top: 2vh;
+  }
+  .main-biography-btn p{
+    background-color: #220c3ff3;
+  }
+  .main-biography-btn {
+    margin-bottom: 5vh;
   }
   .main-biography-background img {
     width: 80vw;
@@ -336,6 +357,7 @@ footer {
     position: relative;
     top: 0;
     margin: 2vh auto;
+    margin-bottom: 10vh;
   }
   .main-future-text p {
     margin: 0 auto;

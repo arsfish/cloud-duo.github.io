@@ -25,7 +25,7 @@ this.addEventListener("scroll", function () {
 let bioBlock = document.getElementById("bio");
 let bioAyg = document.getElementById("bio-ayg");
 let futureSection = document.getElementById("future");
-let distanceAyg = futureSection.getBoundingClientRect().top;
+let distanceAyg = futureSection.offsetTop + introText.offsetHeight;
 this.addEventListener("scroll", function () {
   let topDistance = this.pageYOffset;
   if (topDistance > distanceAyg) {
