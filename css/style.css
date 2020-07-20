@@ -307,6 +307,9 @@ footer {
   #nav {
     background: #1b0a30f3;
   }
+  #nav li:hover {
+    background-color: #0d0616f3;
+  }
   .main-home {
     display: block;
     margin: 0;
