@@ -433,4 +433,14 @@ footer {
     margin: 0 auto;
     width: 80vw;
   }
+  .bio-page__photos img {
+    height: auto;
+  }
+  .bio-page__childhood,
+  .bio-page__career {
+    display: block;
+  }
+  .bio-page__biography img {
+    margin-top: 3vh;
+  }
 }
