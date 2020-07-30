@@ -14,6 +14,13 @@ body {
 ::-webkit-scrollbar {
   width: 0px;
 }
+a {
+  text-decoration: none;
+  color: #d0cfd8;
+}
+a:hover {
+  color: #b0afb6;
+}
 header {
   position: sticky;
   position: -webkit-sticky;
@@ -294,6 +301,58 @@ footer {
     top: 20vh;
   }
 }
+
+.bio-page__AYG {
+  margin: 10vh 10vw;
+}
+.bio-page__photos {
+  display: flex;
+}
+.bio-page__photos img {
+  height: 75vh;
+  margin: 0 auto;
+}
+.bio-page__biography p {
+  text-align: justify;
+}
+.first-paragraph {
+  display: block;
+  margin: 10vh 0;
+}
+.bio-page__childhood,
+.bio-page__career {
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+}
+.bio-page__childhood p,
+.bio-page__career p {
+  margin: 0 3vw 0 0;
+}
+.bio-page__childhood img {
+  height: 70vh;
+}
+.bio-page__career a {
+  font-style: italic;
+  color: #d0cfd8;
+}
+.img-undertext {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+.img-undertext img {
+  max-height: 100vh;
+}
+.img-undertext p {
+  padding: 1vw 1vw;
+  text-align: center;
+}
+.bio-page__biography span {
+  font-weight: 1000;
+}
+
 @media screen and (max-width: 540px) {
   body {
     background-color: #10051b;
