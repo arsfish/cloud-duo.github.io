@@ -352,6 +352,10 @@ footer {
 .bio-page__biography span {
   font-weight: 1000;
 }
+#peppermint {
+  margin: 0 auto;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 540px) {
   body {
