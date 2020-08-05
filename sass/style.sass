@@ -1,0 +1,427 @@
+*
+ box-sizing: border-box
+
+html
+  scrollbar-width: none
+
+body
+  font-family: "Times New Roman", Times, serif
+  background-color: #180101c9
+  margin: 0
+  padding: 0
+  color: #d0cfd8
+
+\::-webkit-scrollbar
+  width: 0px
+
+a
+  text-decoration: none
+  color: #d0cfd8
+
+  &:hover
+    color: #b0afb6
+
+header
+  position: sticky
+  position: -webkit-sticky
+  top: 0px
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  font-size: calc(10pt + 0.8vw)
+  color: #000000
+  width: 100%
+  background-color: #f3f3f3f6
+  z-index: 1
+  padding-bottom: 1vh
+  
+.header
+	&__logo
+		position: absolute
+		top: 1vh
+		left: 5vw
+		&-btn:hover
+			color: #534444
+			cursor: pointer 
+		a
+			text-decoration: none
+			color: #000000
+	
+	&__faq
+		position: absolute
+		top: 1vh
+		right: calc(70px + 10vw)
+		a
+			text-decoration: none
+			color: #000000
+
+	&__lang
+		position: absolute
+		top: 1vh
+		right: calc(35px + 5vw)
+
+
+header .header__toggle
+  position: relative
+  height: 40px
+  right: 0
+  width: 100%
+  padding: 0
+  margin: 0
+  z-index: 1
+
+#nav
+  cursor: pointer
+  overflow: hidden
+  background: #492f2ffa
+  height: 0
+  list-style-type: none
+  padding-left: 0
+  transition-duration: 0.3s
+  transition-property: all
+  transition-timing-function: ease
+
+  &.open
+    height: 100%
+    margin-top: calc(20px + 4vh)
+
+  li
+    text-align: right
+    text-decoration: none
+    width: 100%
+    margin: 0
+
+    a
+      text-decoration: none
+      color: white
+      padding: 10px
+      border-bottom: 1px solid white
+      display: block
+      margin: 0
+
+    &:hover
+      background-color: #2b1515ee
+
+#contain
+  cursor: pointer
+  position: absolute
+  top: 0px
+  right: 0
+
+.bar1, .bar2, .bar3
+  width: calc(25px + 0.8vw)
+  height: 5px
+  background-color: #333
+  margin: 6px 0
+  margin-right: 2vw
+  transition-delay: 0
+  transition-duration: 0.3s
+  transition-property: all
+  transition-timing-function: ease-in
+
+.change
+  .bar1
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px)
+    transform: rotate(-45deg) translate(-9px, 6px)
+
+  .bar2
+    opacity: 0
+
+  .bar3
+    -webkit-transform: rotate(45deg) translate(-8px, -8px)
+    transform: rotate(45deg) translate(-8px, -8px)
+
+.main__home
+  position: relative
+  display: block
+
+.main__intro-bg
+  position: fixed
+  top: 0
+  opacity: 0.9
+  z-index: -1
+  background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg)
+  background-color: #240101f6
+  background-repeat: no-repeat
+  background-size: 100%
+  width: 100%
+  height: 100%
+
+.main__intro-bg-back
+  position: fixed
+  top: 0
+  opacity: 0.08
+  z-index: -5
+  background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg)
+  background-size: 100%
+  background-repeat: no-repeat
+  width: 100%
+  height: 100%
+
+.main__intro-text
+  height: 70vh
+  margin: calc(15vh + 100px) 20vw 0 20vw
+  color: #fffbfb
+  text-align: justify
+
+  p
+    background-color: #2b1515ee
+    font-size: calc(8pt + 0.8vw)
+    padding: 2vh 2vw
+
+.main__biography
+  position: relative
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: flex-start
+  vertical-align: top
+  z-index: 0
+
+.main__biography-background
+  margin: 0 auto
+  margin-top: 10vh
+  margin-bottom: 8vh
+  display: flex
+  flex-wrap: nowrap
+  align-items: flex-start
+  justify-content: space-between
+
+  div
+    padding: 0 1.5vw 2vw 1.5vw
+    width: 35vw
+    text-align: justify
+
+  img
+    width: 50vw
+    height: auto
+    padding: 0 1.5vw 2vw 1.5vw
+    z-index: -1
+
+.main__biography-text
+  width: calc(10px + 5vw)
+  font-size: calc(8pt + 0.8vw)
+  margin: 0
+
+.main__biography p
+  text-align: justify
+
+.main__biography-btn
+  p
+    background-size: 100% 0.3em
+    background-position: 0 88%
+    transition: 0.25s ease-in
+    background-image: linear-gradient(#2b1515ee, #2b1515ee)
+    background-repeat: no-repeat
+    text-align: center
+    padding: 1rem
+    color: #fff
+    border-radius: 0.5rem
+
+    &:hover
+      background-size: 100% 100%
+
+  opacity: 0.8
+  text-decoration: none
+
+#bio
+  transition: 1s ease-out
+
+  &.active
+    background-color: black
+    opacity: 1
+    transition: 1s ease-in-out
+
+#bio__ayg
+  &.active
+    transition: 1s
+    opacity: 0
+
+  transition: 1s ease-out
+
+.main__future
+  position: relative
+  display: block
+
+.main__future-desc
+  position: relative
+  display: block
+
+  img
+    width: 100vw
+
+.main__future-text
+  position: absolute
+  top: calc(300px + 25vh)
+  margin: 0 30vw
+  font-size: calc(8pt + 0.8vw)
+
+  p
+    width: 40vw
+    text-align: justify
+
+#future
+  opacity: 0
+  transition: 1s ease-out
+
+  &.active
+    opacity: 1
+    transition: 1s ease-in-out
+
+footer
+  background-color: #f3f3f3f6
+  border: 1px solid #f3f3f3f6
+
+.footer__contact p
+  padding-left: 2vw
+  padding-top: 1vh
+  color: #333
+
+.bio__page-AYG
+  margin: 5vh 10vw
+
+.bio__page-photos
+  display: block
+
+  img
+    height: 75vh
+    margin: 0 auto
+
+.bio__page-biography p
+  text-align: justify
+
+.first-paragraph
+  display: block
+  margin: 10vh 0
+
+.bio__page-childhood, .bio__page-career
+  display: flex
+  justify-content: space-around
+  align-items: top
+
+.bio__page-childhood p, .bio__page-career p
+  margin: 0 3vw 0 0
+
+.bio__page-childhood img
+  height: 70vh
+
+.bio__page-career a
+  font-style: italic
+  color: #d0cfd8
+
+.img-undertext
+  display: block
+  text-align: center
+  margin: 0
+
+  img
+    max-height: 100vh
+
+  p
+    padding: 1vw 1vw
+    text-align: center
+
+.bio__page-biography span
+  font-weight: 1000
+
+#peppermint
+  margin: 0 auto
+  cursor: pointer
+
+.slide
+  width: 100vw
+
+@media screen and (max-width: 800px)
+  .main__intro-bg, .main__intro-bg-back
+    background-image: url(https://images2.imgbox.com/0d/bb/kbLslW1R_o.jpg)
+    background-size: cover
+
+  .main__future-text
+    top: 20vh
+
+@media screen and (max-width: 540px)
+  body
+    background-color: #10051b
+    z-index: -4
+
+  img
+    display: block
+    max-width: 100%
+    max-height: 100%
+
+  #nav
+    background: #1b0a30f3
+
+    li:hover
+      background-color: #0d0616f3
+
+  .main__home
+    display: block
+    margin: 0
+    box-sizing: border-box
+
+  .main__intro-bg, .main__intro-bg-back
+    background-image: url(https://images2.imgbox.com/0d/bb/kbLslW1R_o.jpg)
+    background-size: cover
+
+  .main__intro-text
+    margin-top: 40vh
+    margin-bottom: 40vh
+
+    p
+      color: #f3f3f3f6
+      background-color: #10051b
+      opacity: 0.9
+      width: 70vw
+
+  .main__biography-background
+    display: block
+    margin: 0 auto
+    width: 100%
+    height: 100%
+    margin-bottom: 5vh
+
+    div
+      width: 80vw
+      text-align: justify
+      margin: 0 auto
+      margin-bottom: 1vh
+      margin-top: 2vh
+
+  .main__biography-btn
+    p
+      background-color: #220c3ff3
+      background-image: none
+
+    margin-bottom: 5vh
+
+  .main__biography-background img
+    width: 80vw
+    margin: 0 auto
+
+  .main__future
+    background-color: black
+    border-bottom: 1px solid black
+
+  .main__future-text
+    display: block
+    position: relative
+    top: 0
+    margin: 2vh auto
+    margin-bottom: 10vh
+
+    p
+      margin: 0 auto
+      width: 80vw
+
+  .bio__page-photos img
+    height: auto
+
+  .bio__page-childhood, .bio__page-career
+    display: block
+
+  .bio__page-biography img
+    margin-top: 3vh
