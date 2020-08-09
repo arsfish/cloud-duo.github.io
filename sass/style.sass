@@ -36,6 +36,15 @@ header
   background-color: #f3f3f3f6
   z-index: 1
   padding-bottom: 1vh
+
+  .header__toggle
+    position: relative
+    height: 40px
+    right: 0
+    width: 100%
+    padding: 0
+    margin: 0
+    z-index: 1
   
 .header
 	&__logo
@@ -61,16 +70,6 @@ header
 		position: absolute
 		top: 1vh
 		right: calc(35px + 5vw)
-
-
-header .header__toggle
-  position: relative
-  height: 40px
-  right: 0
-  width: 100%
-  padding: 0
-  margin: 0
-  z-index: 1
 
 #nav
   cursor: pointer
@@ -133,100 +132,124 @@ header .header__toggle
     -webkit-transform: rotate(45deg) translate(-8px, -8px)
     transform: rotate(45deg) translate(-8px, -8px)
 
-.main__home
-  position: relative
-  display: block
+.main
 
-.main__intro-bg
-  position: fixed
-  top: 0
-  opacity: 0.9
-  z-index: -1
-  background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg)
-  background-color: #240101f6
-  background-repeat: no-repeat
-  background-size: 100%
-  width: 100%
-  height: 100%
+  &__home
+    position: relative
+    display: block
 
-.main__intro-bg-back
-  position: fixed
-  top: 0
-  opacity: 0.08
-  z-index: -5
-  background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg)
-  background-size: 100%
-  background-repeat: no-repeat
-  width: 100%
-  height: 100%
+  &__intro-bg
+    position: fixed
+    top: 0
+    opacity: 0.9
+    z-index: -1
+    background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg)
+    background-color: #240101f6
+    background-repeat: no-repeat
+    background-size: 100%
+    width: 100%
+    height: 100%
 
-.main__intro-text
-  height: 70vh
-  margin: calc(15vh + 100px) 20vw 0 20vw
-  color: #fffbfb
-  text-align: justify
+  &__intro-bg-back
+    position: fixed
+    top: 0
+    opacity: 0.08
+    z-index: -5
+    background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg)
+    background-size: 100%
+    background-repeat: no-repeat
+    width: 100%
+    height: 100%
 
-  p
-    background-color: #2b1515ee
-    font-size: calc(8pt + 0.8vw)
-    padding: 2vh 2vw
-
-.main__biography
-  position: relative
-  display: flex
-  flex-direction: column
-  flex-wrap: wrap
-  justify-content: space-around
-  align-items: flex-start
-  vertical-align: top
-  z-index: 0
-
-.main__biography-background
-  margin: 0 auto
-  margin-top: 10vh
-  margin-bottom: 8vh
-  display: flex
-  flex-wrap: nowrap
-  align-items: flex-start
-  justify-content: space-between
-
-  div
-    padding: 0 1.5vw 2vw 1.5vw
-    width: 35vw
+  &__intro-text
+    height: 70vh
+    margin: calc(15vh + 100px) 20vw 0 20vw
+    color: #fffbfb
     text-align: justify
 
-  img
-    width: 50vw
-    height: auto
-    padding: 0 1.5vw 2vw 1.5vw
-    z-index: -1
+    p
+      background-color: #2b1515ee
+      font-size: calc(8pt + 0.8vw)
+      padding: 2vh 2vw
 
-.main__biography-text
-  width: calc(10px + 5vw)
-  font-size: calc(8pt + 0.8vw)
-  margin: 0
+  &__biography
+    position: relative
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: flex-start
+    vertical-align: top
+    z-index: 0
 
-.main__biography p
-  text-align: justify
+    p
+      text-align: justify
 
-.main__biography-btn
-  p
-    background-size: 100% 0.3em
-    background-position: 0 88%
-    transition: 0.25s ease-in
-    background-image: linear-gradient(#2b1515ee, #2b1515ee)
-    background-repeat: no-repeat
-    text-align: center
-    padding: 1rem
-    color: #fff
-    border-radius: 0.5rem
+  &__biography-background
+    margin: 0 auto
+    margin-top: 10vh
+    margin-bottom: 8vh
+    display: flex
+    flex-wrap: nowrap
+    align-items: flex-start
+    justify-content: space-between
 
-    &:hover
-      background-size: 100% 100%
+    div
+      padding: 0 1.5vw 2vw 1.5vw
+      width: 35vw
+      text-align: justify
 
-  opacity: 0.8
-  text-decoration: none
+    img
+      width: 50vw
+      height: auto
+      padding: 0 1.5vw 2vw 1.5vw
+      z-index: -1
 
+  &__biography-text
+    width: calc(10px + 5vw)
+    font-size: calc(8pt + 0.8vw)
+    margin: 0
+
+  &__biography-btn
+    p
+      background-size: 100% 0.3em
+      background-position: 0 88%
+      transition: 0.25s ease-in
+      background-image: linear-gradient(#2b1515ee, #2b1515ee)
+      background-repeat: no-repeat
+      text-align: center
+      padding: 1rem
+      color: #fff
+      border-radius: 0.5rem
+
+      &:hover
+        background-size: 100% 100%
+
+    opacity: 0.8
+    text-decoration: none
+
+
+  &__future
+    position: relative
+    display: block
+  
+  &__future-desc
+    position: relative
+    display: block
+  
+    img
+      width: 100vw
+  
+  &__future-text
+    position: absolute
+    top: calc(300px + 25vh)
+    margin: 0 30vw
+    font-size: calc(8pt + 0.8vw)
+  
+    p
+      width: 40vw
+      text-align: justify
+  
 #bio
   transition: 1s ease-out
 
@@ -235,33 +258,13 @@ header .header__toggle
     opacity: 1
     transition: 1s ease-in-out
 
-#bio__ayg
-  &.active
-    transition: 1s
-    opacity: 0
+  &__ayg
+    &.active
+      transition: 1s
+      opacity: 0
 
-  transition: 1s ease-out
+    transition: 1s ease-out
 
-.main__future
-  position: relative
-  display: block
-
-.main__future-desc
-  position: relative
-  display: block
-
-  img
-    width: 100vw
-
-.main__future-text
-  position: absolute
-  top: calc(300px + 25vh)
-  margin: 0 30vw
-  font-size: calc(8pt + 0.8vw)
-
-  p
-    width: 40vw
-    text-align: justify
 
 #future
   opacity: 0
@@ -275,42 +278,53 @@ footer
   background-color: #f3f3f3f6
   border: 1px solid #f3f3f3f6
 
-.footer__contact p
-  padding-left: 2vw
-  padding-top: 1vh
-  color: #333
+.footer
+  &__contact 
+    p
+      padding-left: 2vw
+      padding-top: 1vh
+      color: #333
 
-.bio__page-AYG
-  margin: 5vh 10vw
+.bio
+  &__page-AYG
+    margin: 5vh 10vw
 
-.bio__page-photos
-  display: block
+  &__page-photos
+    display: block
 
-  img
-    height: 75vh
-    margin: 0 auto
+    img
+      height: 75vh
+      margin: 0 auto
 
-.bio__page-biography p
-  text-align: justify
+  &__page-biography 
+    p
+     text-align: justify
+
+  &__page-childhood, &__page-career
+    display: flex
+    justify-content: space-around
+    align-items: top
+
+  &__page-childhood, &__page-career 
+    p
+      margin: 0 3vw 0 0
+
+  &__page-childhood
+    img
+      height: 70vh
+
+  &__page-career
+    a
+      font-style: italic
+      color: #d0cfd8
+
+  &__page-biography
+    span
+     font-weight: 1000
 
 .first-paragraph
   display: block
   margin: 10vh 0
-
-.bio__page-childhood, .bio__page-career
-  display: flex
-  justify-content: space-around
-  align-items: top
-
-.bio__page-childhood p, .bio__page-career p
-  margin: 0 3vw 0 0
-
-.bio__page-childhood img
-  height: 70vh
-
-.bio__page-career a
-  font-style: italic
-  color: #d0cfd8
 
 .img-undertext
   display: block
@@ -323,9 +337,6 @@ footer
   p
     padding: 1vw 1vw
     text-align: center
-
-.bio__page-biography span
-  font-weight: 1000
 
 #peppermint
   margin: 0 auto
@@ -358,70 +369,72 @@ footer
     li:hover
       background-color: #0d0616f3
 
-  .main__home
-    display: block
-    margin: 0
-    box-sizing: border-box
+  .main
+    &__home
+      display: block
+      margin: 0
+      box-sizing: border-box
 
-  .main__intro-bg, .main__intro-bg-back
-    background-image: url(https://images2.imgbox.com/0d/bb/kbLslW1R_o.jpg)
-    background-size: cover
+    &__intro-bg, &__intro-bg-back
+      background-image: url(https://images2.imgbox.com/0d/bb/kbLslW1R_o.jpg)
+      background-size: cover
 
-  .main__intro-text
-    margin-top: 40vh
-    margin-bottom: 40vh
+    &__intro-text
+      margin-top: 40vh
+      margin-bottom: 40vh
 
-    p
-      color: #f3f3f3f6
-      background-color: #10051b
-      opacity: 0.9
-      width: 70vw
+      p
+        color: #f3f3f3f6
+        background-color: #10051b
+        opacity: 0.9
+        width: 70vw
 
-  .main__biography-background
-    display: block
-    margin: 0 auto
-    width: 100%
-    height: 100%
-    margin-bottom: 5vh
-
-    div
-      width: 80vw
-      text-align: justify
+    &__biography-background
+      display: block
       margin: 0 auto
-      margin-bottom: 1vh
-      margin-top: 2vh
+      width: 100%
+      height: 100%
+      margin-bottom: 5vh
 
-  .main__biography-btn
-    p
-      background-color: #220c3ff3
-      background-image: none
+      div
+        width: 80vw
+        text-align: justify
+        margin: 0 auto
+        margin-bottom: 1vh
+        margin-top: 2vh
 
-    margin-bottom: 5vh
+    &__biography-btn
+      p
+        background-color: #220c3ff3
+        background-image: none
 
-  .main__biography-background img
-    width: 80vw
-    margin: 0 auto
+      margin-bottom: 5vh
 
-  .main__future
-    background-color: black
-    border-bottom: 1px solid black
-
-  .main__future-text
-    display: block
-    position: relative
-    top: 0
-    margin: 2vh auto
-    margin-bottom: 10vh
-
-    p
-      margin: 0 auto
+    &__biography-background img
       width: 80vw
+      margin: 0 auto
 
-  .bio__page-photos img
-    height: auto
+    &__future
+      background-color: black
+      border-bottom: 1px solid black
 
-  .bio__page-childhood, .bio__page-career
-    display: block
+    &__future-text
+      display: block
+      position: relative
+      top: 0
+      margin: 2vh auto
+      margin-bottom: 10vh
 
-  .bio__page-biography img
-    margin-top: 3vh
+      p
+        margin: 0 auto
+        width: 80vw
+
+  .bio
+    &__page-photos img
+      height: auto
+
+    &__page-childhood, .bio__page-career
+      display: block
+
+    &__page-biography img
+      margin-top: 3vh
