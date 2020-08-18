@@ -1,3 +1,11 @@
+@mixin intro-bg 
+  background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+  width: 100%
+  height: 100%
+
+  
 *
  box-sizing: border-box
 
@@ -15,7 +23,6 @@ body
   width: 0px
 
 a
-  text-decoration: none
   color: #d0cfd8
 
   &:hover
@@ -143,23 +150,15 @@ header
     top: 0
     opacity: 0.9
     z-index: -1
-    background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg)
     background-color: #240101f6
-    background-repeat: no-repeat
-    background-size: 100%
-    width: 100%
-    height: 100%
+    @include intro-bg
 
   &__intro-bg-back
     position: fixed
     top: 0
     opacity: 0.08
     z-index: -5
-    background-image: url(https://images2.imgbox.com/08/67/ckJN95aU_o.jpg)
-    background-size: 100%
-    background-repeat: no-repeat
-    width: 100%
-    height: 100%
+    @include intro-bg
 
   &__intro-text
     height: 70vh
@@ -433,7 +432,7 @@ footer
     &__page-photos img
       height: auto
 
-    &__page-childhood, .bio__page-career
+    &__page-childhood, &__page-career
       display: block
 
     &__page-biography img
