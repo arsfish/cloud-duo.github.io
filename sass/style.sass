@@ -285,7 +285,7 @@ footer
       color: #333
 
 .bio
-  &__page-AYG
+  &__page-AYG, &__page-ZYL
     margin: 5vh 10vw
 
   &__page-photos
@@ -307,14 +307,17 @@ footer
   &__page-childhood, &__page-career 
     p
       margin: 0 3vw 0 0
-
+    .img-undertext
+      img 
+        height: 60vh
+      p
+        margin: 0
   &__page-childhood
     img
-      height: 70vh
+      height: 60vh
 
   &__page-career
     a
-      font-style: italic
       color: #d0cfd8
 
   &__page-biography
@@ -436,4 +439,6 @@ footer
       display: block
 
     &__page-biography img
+      margin: 0 auto
       margin-top: 3vh
+    
