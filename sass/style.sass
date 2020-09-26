@@ -206,7 +206,7 @@ header
 
   &__biography-text
     width: calc(10px + 5vw)
-    font-size: calc(8pt + 0.8vw)
+    font-size: calc(10pt + 0.8vw)
     margin: 0
 
   &__biography-btn
@@ -303,19 +303,24 @@ footer
     display: flex
     justify-content: space-around
     align-items: top
-
-  &__page-childhood, &__page-career 
+    flex-wrap nowrap
     p
       margin: 0 3vw 0 0
     .img-undertext
+      display: block
+      text-align: center
+      margin: 0
       img 
-        height: 60vh
+        max-height: calc(400px + 15vh)
+        max-width: 45vw
       p
         margin: 0
+        padding: 1vw 1vw
+        text-align: center
   &__page-childhood
-    img
-      height: 60vh
-
+    .img-undertext
+      img 
+        height: calc(100px + 30vh)
   &__page-career
     a
       color: #d0cfd8
@@ -327,18 +332,6 @@ footer
 .first-paragraph
   display: block
   margin: 10vh 0
-
-.img-undertext
-  display: block
-  text-align: center
-  margin: 0
-
-  img
-    max-height: 100vh
-
-  p
-    padding: 1vw 1vw
-    text-align: center
 
 #peppermint
   margin: 0 auto

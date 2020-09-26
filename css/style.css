@@ -273,7 +273,7 @@ header .header__toggle {
 
 .main__biography-text {
   width: calc(10px + 5vw);
-  font-size: calc(8pt + 0.8vw);
+  font-size: calc(10pt + 0.8vw);
   margin: 0;
 }
 
@@ -404,16 +404,25 @@ footer {
   margin: 0 3vw 0 0;
 }
 
+.bio__page-childhood .img-undertext, .bio__page-career .img-undertext {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
 .bio__page-childhood .img-undertext img, .bio__page-career .img-undertext img {
-  height: 60vh;
+  max-height: calc(400px + 15vh);
+  max-width: 45vw;
 }
 
 .bio__page-childhood .img-undertext p, .bio__page-career .img-undertext p {
   margin: 0;
+  padding: 1vw 1vw;
+  text-align: center;
 }
 
-.bio__page-childhood img {
-  height: 60vh;
+.bio__page-childhood .img-undertext img {
+  height: calc(100px + 30vh);
 }
 
 .bio__page-career a {
@@ -427,21 +436,6 @@ footer {
 .first-paragraph {
   display: block;
   margin: 10vh 0;
-}
-
-.img-undertext {
-  display: block;
-  text-align: center;
-  margin: 0;
-}
-
-.img-undertext img {
-  max-height: 100vh;
-}
-
-.img-undertext p {
-  padding: 1vw 1vw;
-  text-align: center;
 }
 
 #peppermint {
